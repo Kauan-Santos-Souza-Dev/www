@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fidela Web | Sites para pequenos negócios</title>
+  <meta name="description"
+    content="Criamos o site do seu negócio, cuidamos da manutenção e do domínio. Presença digital simples, bonita e confiável para você focar em seus clientes.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fidela Web | Sites para pequenos negócios">
+  <meta property="og:description"
+    content="Criamos o site do seu negócio, cuidamos da manutenção e do domínio. Você foca em atender seus clientes.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon e Ícones da Marca -->
+  <link rel="icon" type="image/svg+xml" href="fidela-web-icone.svg">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+  <link rel="apple-touch-icon" href="favicon-512.png">
+  <meta name="theme-color" content="#FFF6EC">
+
+  <!-- Metadados da Empresa (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fidela Web",
+    "url": "https://fidelaweb.com.br",
+    "logo": "fidela-web-logo.png",
+    "email": "fidelaweb@gmail.com",
+    "telephone": "+5561981714067",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+5561981714067",
+      "contactType": "customer service",
+      "availableLanguage": "Portuguese"
+    },
+    "sameAs": [
+      "https://instagram.com/fidelaweb"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts com display=swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Folha de estilo principal -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Link de acessibilidade para pular navegação -->
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- Barra sutil de progresso de leitura no topo -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+  <!-- Header Fixo -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#inicio" class="brand-logo" aria-label="Fidela Web - Ir para o início">
+        <img src="fidela-web-logo.svg" alt="Fidela Web" class="brand-logo-img" width="142" height="42">
+      </a>
+
+      <!-- Navegação Desktop -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#como-funciona" class="nav-link">Como funciona</a></li>
+          <li><a href="#modelos" class="nav-link">Modelos</a></li>
+          <li><a href="#plano" class="nav-link">Plano</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botão CTA no Header -->
+      <div class="header-actions">
+        <a href="https://wa.me/5561981714067?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Fidela%20Web%20e%20gostaria%20de%20saber%20mais."
+          class="btn btn-primary btn-header js-btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          Chamar no WhatsApp
+        </a>
+        <!-- Botão Menu Hambúrguer (Mobile) -->
+        <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu"
+          aria-label="Abrir menu de navegação">
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Gaveta de Menu Mobile -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <ul class="mobile-nav-list">
+          <li><a href="#inicio" class="mobile-nav-link">Início</a></li>
+          <li><a href="#como-funciona" class="mobile-nav-link">Como funciona</a></li>
+          <li><a href="#modelos" class="mobile-nav-link">Modelos</a></li>
+          <li><a href="#plano" class="mobile-nav-link">Plano</a></li>
+          <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+        </ul>
+        <div class="mobile-menu-cta">
+          <a href="https://wa.me/5561981714067?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Fidela%20Web%20e%20gostaria%20de%20saber%20mais."
+            class="btn btn-primary btn-block js-btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main id="conteudo">
+    <!-- Seção 1: Hero -->
+    <section class="section-hero" id="inicio">
+      <!-- Formas orgânicas suaves no fundo (blobs) -->
+      <div class="hero-backdrop" aria-hidden="true">
+        <div class="blob blob-1" id="heroBlob1"></div>
+        <div class="blob blob-2" id="heroBlob2"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge reveal" style="--delay: 0.1s;">
+            <span>Sites para pequenos negócios</span>
+          </div>
+          <h1 class="hero-title reveal" style="--delay: 0.2s;">
+            Seu negócio merece um site que passa confiança
+          </h1>
+          <p class="hero-subtitle reveal" style="--delay: 0.3s;">
+            Criamos o site do seu negócio, cuidamos da manutenção e do domínio. Você foca em atender seus clientes.
+          </p>
+          <div class="hero-actions reveal" style="--delay: 0.4s;">
+            <a href="https://wa.me/5561981714067?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Fidela%20Web%20e%20gostaria%20de%20saber%20mais."
+              class="btn btn-primary btn-large js-btn-whatsapp" target="_blank" rel="noopener noreferrer">
+              Chamar no WhatsApp
+            </a>
+            <a href="#modelos" class="btn btn-secondary btn-large">
+              Ver modelos
+            </a>
+          </div>
+        </div>
+
+        <!-- Janela de navegador desenhada em CSS/SVG -->
+        <div class="hero-visual reveal" style="--delay: 0.35s;">
+          <div class="mockup-window" id="mockupWindow" aria-hidden="true">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span class="mockup-dot red"></span>
+                <span class="mockup-dot yellow"></span>
+                <span class="mockup-dot green"></span>
+              </div>
+              <div class="mockup-address">
+                <span class="mockup-lock">🔒</span>
+                <span class="mockup-url">seunegocio.com.br</span>
+              </div>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-site-header">
+                <div class="mockup-logo-pill"></div>
+                <div class="mockup-nav-pills">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="mockup-hero-block">
+                <div class="mockup-pill-sm"></div>
+                <div class="mockup-text-lg"></div>
+                <div class="mockup-text-md"></div>
+                <div class="mockup-btn-pill"></div>
+              </div>
+              <div class="mockup-cards-row">
+                <div class="mockup-card">
+                  <div class="mockup-card-icon"></div>
+                  <div class="mockup-card-line"></div>
+                </div>
+                <div class="mockup-card">
+                  <div class="mockup-card-icon"></div>
+                  <div class="mockup-card-line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 2: Por que ter um site -->
+    <section class="section section-why" id="por-que-ter-um-site">
+      <div class="container">
+        <div class="cards-grid cards-grid-3">
+          <!-- Card 1 -->
+          <article class="card feature-card reveal" style="--delay: 0.1s;">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.93 4.93 4.24 4.24" />
+                <path d="m14.83 9.17 4.24-4.24" />
+                <path d="m14.83 14.83 4.24 4.24" />
+                <path d="m9.17 14.83-4.24 4.24" />
+                <circle cx="12" cy="12" r="4" />
+              </svg>
+            </div>
+            <h2 class="card-title">Primeira impressão</h2>
+            <p class="card-text">
+              Seu cliente pesquisa antes de ir. Um site bonito mostra que seu negócio é sério.
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card feature-card reveal" style="--delay: 0.2s;">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                <path d="M12 18h.01" />
+              </svg>
+            </div>
+            <h2 class="card-title">Funciona no celular</h2>
+            <p class="card-text">
+              Seu site se ajusta a qualquer tela, do celular ao computador.
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card feature-card reveal" style="--delay: 0.3s;">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <h2 class="card-title">Tudo em um lugar</h2>
+            <p class="card-text">
+              Serviços, horários, endereço e botão de WhatsApp reunidos.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3: Como funciona -->
+    <section class="section section-alt section-how" id="como-funciona">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <h2 class="section-title">Como funciona</h2>
+        </div>
+
+        <div class="timeline" id="timeline">
+          <div class="timeline-line" id="timelineLine" aria-hidden="true"></div>
+
+          <!-- Passo 1 -->
+          <div class="timeline-step reveal" style="--delay: 0.1s;">
+            <div class="step-marker" aria-hidden="true">1</div>
+            <div class="step-card card">
+              <h3 class="step-title">Conversa pelo WhatsApp</h3>
+              <p class="step-text">Você conta sobre seu negócio e o que precisa.</p>
+            </div>
+          </div>
+
+          <!-- Passo 2 -->
+          <div class="timeline-step reveal" style="--delay: 0.2s;">
+            <div class="step-marker" aria-hidden="true">2</div>
+            <div class="step-card card">
+              <h3 class="step-title">Criamos seu site</h3>
+              <p class="step-text">Montamos o site com a cara do seu negócio.</p>
+            </div>
+          </div>
+
+          <!-- Passo 3 -->
+          <div class="timeline-step reveal" style="--delay: 0.3s;">
+            <div class="step-marker" aria-hidden="true">3</div>
+            <div class="step-card card">
+              <h3 class="step-title">Site no ar</h3>
+              <p class="step-text">Publicamos com domínio próprio.</p>
+            </div>
+          </div>
+
+          <!-- Passo 4 -->
+          <div class="timeline-step reveal" style="--delay: 0.4s;">
+            <div class="step-marker" aria-hidden="true">4</div>
+            <div class="step-card card">
+              <h3 class="step-title">Manutenção básica</h3>
+              <p class="step-text">Cuidamos do básico para o site continuar funcionando.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 4: Modelos (vitrine) -->
+    <section class="section section-showcase" id="modelos">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <h2 class="section-title">Veja como pode ficar o seu</h2>
+          <p class="section-desc">
+            Este site é um exemplo do nosso trabalho. Veja também modelos para diferentes tipos de negócio.
+          </p>
+        </div>
+
+        <!-- Grid de modelos preenchido dinamicamente pelo js/main.js a partir de SITE_CONFIG.modelos -->
+        <div class="modelos-grid" id="modelosGrid">
+          <noscript>
+            <div class="modelo-card card">
+              <div class="modelo-preview" aria-hidden="true">
+                <div class="modelo-preview-screen">
+                  <div class="barber-pole-decor"></div>
+                  <div class="modelo-preview-text"></div>
+                </div>
+              </div>
+              <div class="modelo-card-content">
+                <div class="modelo-card-header">
+                  <h3 class="modelo-card-title">Barbearia</h3>
+                  <span class="badge-em-breve">Em breve</span>
+                </div>
+                <p class="modelo-card-desc">Modelo para barbearias e salões</p>
+              </div>
+            </div>
+            <div class="modelo-card card">
+              <div class="modelo-preview" aria-hidden="true">
+                <div class="modelo-preview-screen">
+                  <div class="store-bag-decor"></div>
+                  <div class="modelo-preview-text"></div>
+                </div>
+              </div>
+              <div class="modelo-card-content">
+                <div class="modelo-card-header">
+                  <h3 class="modelo-card-title">Comércio local</h3>
+                  <span class="badge-em-breve">Em breve</span>
+                </div>
+                <p class="modelo-card-desc">Modelo para pequenas lojas e comércios</p>
+              </div>
+            </div>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 5: Plano -->
+    <section class="section section-alt section-pricing" id="plano">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <h2 class="section-title">Um plano simples</h2>
+        </div>
+
+        <div class="pricing-card-wrapper reveal" style="--delay: 0.15s;">
+          <article class="card pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="pricing-plan-name">Site + manutenção + domínio</h3>
+
+              <div class="pricing-value-area" id="pricingValueArea">
+                <div class="pricing-price-display" id="pricingPriceDisplay">
+                  <span class="pricing-amount" id="pricingAmount">R$ 79,90</span>
+                  <span class="pricing-period" id="pricingPeriod">/mês</span>
+                </div>
+                <p class="pricing-contact-display" id="pricingContactDisplay" style="display: none;">
+                  Fale com a gente para saber o valor
+                </p>
+              </div>
+            </div>
+
+            <ul class="pricing-features">
+              <li>
+                <span class="feature-check" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+                <span>Site responsivo, no ar</span>
+              </li>
+              <li>
+                <span class="feature-check" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+                <span>Domínio próprio</span>
+              </li>
+              <li>
+                <span class="feature-check" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+                <span>Manutenção básica</span>
+              </li>
+            </ul>
+
+            <div class="pricing-card-action">
+              <a href="https://wa.me/5561981714067?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20plano%20da%20Fidela%20Web."
+                class="btn btn-primary btn-block btn-large js-btn-plano" target="_blank" rel="noopener noreferrer">
+                Quero esse plano
+              </a>
+            </div>
+
+            <p class="pricing-note">
+              Combinamos os detalhes juntos antes de começar.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 6: Faixa "Em breve" -->
+    <section class="section-banner-soon">
+      <div class="container">
+        <div class="banner-soon-card reveal">
+          <div class="banner-badge">Em breve</div>
+          <p class="banner-text">
+            Estamos preparando um serviço de divulgação orgânica (Instagram e outros) para ajudar seu negócio a aparecer
+            mais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 7: Quem somos -->
+    <section class="section section-about" id="quem-somos">
+      <div class="container container-narrow">
+        <div class="about-card card reveal">
+          <h2 class="section-title">Quem somos</h2>
+          <p class="about-text">
+            A Fidela Web é uma empresa de criação de sites para pequenos negócios. Acreditamos que todo negócio, por
+            menor que seja, merece uma presença digital bonita, simples e que funcione.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 8: Contato -->
+    <section class="section section-alt section-contact" id="contato">
+      <div class="container container-narrow">
+        <div class="section-header text-center reveal">
+          <h2 class="section-title">Vamos conversar?</h2>
+        </div>
+
+        <div class="contact-options-grid">
+          <!-- Opção 1: WhatsApp (botão grande) -->
+          <div class="contact-card card contact-card-main reveal" style="--delay: 0.1s;">
+            <div class="contact-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+            </div>
+            <div class="contact-card-info">
+              <h3 class="contact-card-title">WhatsApp / Telefone</h3>
+              <p class="contact-card-desc">Fale com a gente: <a href="tel:+5561981714067" class="contact-phone-link"
+                  id="contactPhoneLink">(61) 98171-4067</a></p>
+            </div>
+            <a href="https://wa.me/5561981714067?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Fidela%20Web%20e%20gostaria%20de%20saber%20mais."
+              class="btn btn-primary btn-large btn-contact-wa js-btn-whatsapp" target="_blank"
+              rel="noopener noreferrer">
+              Chamar no WhatsApp
+            </a>
+          </div>
+
+          <div class="contact-secondary-grid">
+            <!-- Opção 2: Instagram -->
+            <div class="contact-card card reveal" style="--delay: 0.2s;">
+              <div class="contact-card-header-sm">
+                <span class="contact-mini-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                </span>
+                <span class="contact-type-label">Instagram</span>
+              </div>
+              <a href="https://instagram.com/fidelaweb" class="contact-link" id="contactInstagramLink" target="_blank"
+                rel="noopener noreferrer">
+                @fidelaweb
+              </a>
+            </div>
+
+            <!-- Opção 3: E-mail (somente texto com botão Copiar) -->
+            <div class="contact-card card reveal" style="--delay: 0.3s;">
+              <div class="contact-card-header-sm">
+                <span class="contact-mini-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                </span>
+                <span class="contact-type-label">E-mail</span>
+              </div>
+              <div class="email-copy-box">
+                <a href="mailto:fidelaweb@gmail.com" class="email-text email-link"
+                  id="contactEmailLink">fidelaweb@gmail.com</a>
+                <button type="button" class="btn btn-copy" id="btnCopyEmail" aria-label="Copiar endereço de e-mail">
+                  <svg class="icon-copy" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+                  </svg>
+                  <span class="copy-label-text">Copiar</span>
+                </button>
+              </div>
+              <!-- Mensagem de status acessível para leitores de tela -->
+              <div class="sr-only" id="emailCopyFeedback" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#inicio" class="brand-logo" aria-label="Fidela Web - Voltar ao topo">
+          <img src="fidela-web-logo.svg" alt="Fidela Web" class="brand-logo-img" width="142" height="42">
+        </a>
+      </div>
+      <div class="footer-copy">
+        <p>© <span id="anoAtual">2026</span> Fidela Web. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante de WhatsApp (Mobile) -->
+  <a href="https://wa.me/5561981714067?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Fidela%20Web%20e%20gostaria%20de%20saber%20mais."
+    class="floating-wa-btn js-btn-whatsapp" id="floatingWaBtn" aria-label="Falar no WhatsApp com a Fidela Web"
+    target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path
+        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </svg>
+  </a>
+
+  <!-- Scripts Vanilla (sem type="module", funcionam direto com duplo clique no HTML) -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
