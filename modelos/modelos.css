@@ -1,0 +1,317 @@
+/* =========================================================
+   Página de modelos - Fidela Web
+   Se algo destoar da home, ajuste as variáveis abaixo
+   (copie os valores reais do seu style.css).
+   ========================================================= */
+:root {
+  --creme: #FFF6EC;
+  --creme-escuro: #F5E4D0;
+  --carvao: #2B2623;
+  --texto-suave: #6F655E;
+  --laranja: #D9531E;
+  --laranja-escuro: #B8431A;
+  --branco: #FFFFFF;
+  --borda: #EBDCC9;
+
+  --fonte-titulo: "Fraunces", Georgia, "Times New Roman", serif;
+  --fonte-texto: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --largura: 1120px;
+  --raio: 20px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--carvao);
+  background:
+    radial-gradient(900px 480px at 100% -8%, rgba(244, 164, 96, 0.20), transparent 62%),
+    radial-gradient(700px 420px at -10% 8%, rgba(245, 228, 208, 0.9), transparent 60%),
+    var(--creme);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 3px solid rgba(217, 83, 30, 0.55);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--largura);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 5vw, 40px);
+}
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 18px;
+}
+
+.cabecalho__logo img {
+  height: 52px;
+  width: auto;
+}
+
+.cabecalho__acoes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cabecalho__link {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--carvao);
+}
+
+.cabecalho__link:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  font: 700 0.95rem/1.2 var(--fonte-texto);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn--primario {
+  background: var(--laranja);
+  color: var(--branco);
+  box-shadow: 0 8px 20px rgba(217, 83, 30, 0.28);
+}
+
+.btn--primario:hover { background: var(--laranja-escuro); }
+
+.btn--contorno {
+  background: transparent;
+  color: var(--carvao);
+  border-color: #D9C7B1;
+}
+
+.btn--contorno:hover { border-color: var(--carvao); }
+
+.btn--pequeno { padding: 10px 18px; font-size: 0.9rem; }
+
+/* ---------- Abertura ---------- */
+.abertura {
+  padding-block: clamp(40px, 8vw, 88px) clamp(28px, 5vw, 48px);
+}
+
+.abertura h1 {
+  max-width: 18ch;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 5.6vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.abertura p {
+  max-width: 54ch;
+  margin-top: 18px;
+  font-size: 1.1rem;
+  color: var(--texto-suave);
+}
+
+/* ---------- Grade de modelos ---------- */
+.modelos { padding-bottom: clamp(48px, 8vw, 96px); }
+
+.modelos__grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+  gap: 28px;
+}
+
+.cartao {
+  display: flex;
+  flex-direction: column;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(43, 38, 35, 0.07);
+}
+
+.cartao__previa {
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  background: linear-gradient(135deg, var(--creme-escuro), #EFD9BF);
+}
+
+.cartao__corpo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 26px 28px;
+}
+
+.cartao__titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cartao__titulo h2 {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.selo {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--creme-escuro);
+  border: 1px solid var(--borda);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--texto-suave);
+}
+
+.cartao__corpo p { color: var(--texto-suave); }
+
+.cartao__corpo .btn { align-self: flex-start; margin-top: auto; }
+.cartao__corpo p + .btn { margin-top: 12px; }
+
+/* ---------- Prévia em CSS do modelo de barbearia ---------- */
+.mini {
+  width: min(100%, 360px);
+  aspect-ratio: 16 / 10;
+  display: flex;
+  flex-direction: column;
+  background: #14110F;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 18px 34px rgba(43, 38, 35, 0.32);
+}
+
+.mini__barra {
+  display: flex;
+  gap: 5px;
+  padding: 8px 10px;
+  background: #1E1A17;
+}
+
+.mini__barra span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4A423C;
+}
+
+.mini__corpo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+
+.mini__topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mini__logo { width: 38%; height: 8px; border-radius: 4px; background: #F5EFE6; }
+.mini__menu { width: 24%; height: 5px; border-radius: 3px; background: #4A423C; }
+
+.mini__hero { display: flex; flex-direction: column; gap: 6px; padding-top: 4px; }
+.mini__titulo { width: 74%; height: 12px; border-radius: 4px; background: #F5EFE6; }
+.mini__titulo--curto { width: 52%; background: #E9D8B4; }
+.mini__texto { width: 62%; height: 5px; border-radius: 3px; background: #6B5F55; }
+.mini__botao { width: 30%; height: 14px; margin-top: 4px; border-radius: 7px; background: #C8873A; }
+
+.mini__servicos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: auto;
+}
+
+.mini__servicos span {
+  height: 26px;
+  border-radius: 6px;
+  background: #1E1A17;
+  border: 1px solid #3A322C;
+  border-top: 3px solid #C8873A;
+}
+
+/* ---------- Cartão "mais modelos em breve" ---------- */
+.cartao--aviso {
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.55);
+  border: 2px dashed #D9C7B1;
+  box-shadow: none;
+}
+
+.cartao--aviso .cartao__corpo { flex: initial; padding: 36px 30px; gap: 12px; }
+
+.cartao--aviso h2 {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Voltar ---------- */
+.voltar { margin-top: clamp(32px, 6vw, 56px); }
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  margin-top: auto;
+  padding-block: 28px;
+  border-top: 1px solid var(--borda);
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+.rodape__interno {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 520px) {
+  .cabecalho__logo img { height: 42px; }
+  .cabecalho__acoes { gap: 12px; }
+  .btn--pequeno { padding: 9px 14px; font-size: 0.85rem; }
+  .cartao__corpo { padding: 22px 20px 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+}
