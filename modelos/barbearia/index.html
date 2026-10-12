@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Modelo: Barbearia | Fidela Web</title>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="barbearia.css">
+</head>
+<body id="topo">
+
+  <!-- ======================================================================
+       1. Faixa Fixa no Topo (Demonstração Fidela Web)
+       ====================================================================== -->
+  <aside class="demo-topbar" aria-label="Aviso de modelo demonstrativo">
+    <div class="demo-topbar__inner">
+      <nav class="demo-topbar__nav" aria-label="Links de navegação do modelo">
+        <a href="../index.html" class="demo-topbar__back-link">← Voltar aos modelos</a>
+        <span class="demo-topbar__nav-sep" aria-hidden="true">·</span>
+        <a href="../../index.html" class="demo-topbar__back-link">Site da Fidela Web</a>
+      </nav>
+      <div class="demo-topbar__text">
+        <span class="demo-topbar__badge">Demonstração</span>
+        <span>Modelo de demonstração da Fidela Web. Nome, preços e informações são fictícios.</span>
+      </div>
+      <a href="https://wa.me/5561981714067?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20barbearia%20no%20site%20da%20Fidela%20Web%20e%20quero%20um%20site%20assim." 
+         class="demo-topbar__link" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         title="Solicitar um site para sua barbearia com a Fidela Web">
+        <span>Quero um site assim</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       2. Cabeçalho (Header com Logo Fictício, Menu e Botão Agendar)
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#topo" class="site-logo" aria-label="Barbearia Exemplo - Início">
+        <!-- Ícone SVG Tesoura & Navalha -->
+        <svg class="site-logo__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <!-- Tesoura -->
+          <circle cx="12" cy="12" r="4"></circle>
+          <line x1="15" y1="15" x2="28" y2="28"></line>
+          <circle cx="12" cy="28" r="4"></circle>
+          <line x1="15" y1="25" x2="28" y2="12"></line>
+          <!-- Ponto central de fixação -->
+          <circle cx="21" cy="20" r="1.5" fill="currentColor"></circle>
+        </svg>
+        <div class="site-logo__text">
+          <span class="site-logo__name">Barbearia Exemplo</span>
+          <span class="site-logo__tagline">Cuidado &amp; Tradição</span>
+        </div>
+      </a>
+
+      <button type="button" class="site-header__menu-btn" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li><a href="#servicos" class="site-nav__link">Serviços</a></li>
+          <li><a href="#sobre" class="site-nav__link">Sobre</a></li>
+          <li><a href="#equipe" class="site-nav__link">Equipe</a></li>
+          <li><a href="#horarios" class="site-nav__link">Horários</a></li>
+        </ul>
+        <button type="button" class="btn btn-primary btn-sm" data-action="agendar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Agendar</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         3. Hero Section
+         ====================================================================== -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <span>Tradição, navalha e pontualidade</span>
+          </div>
+          
+          <h1 class="hero-title">
+            O corte e o cuidado que você merece, com <span>horário marcado</span>.
+          </h1>
+
+          <p class="hero-subtitle">
+            Ambiente reservado, atendimento pontual e profissionais experientes em cortes clássicos, degradê impecável e barba tradicional com toalha quente.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn-primary" data-action="agendar">
+              <!-- Ícone de Calendário / Agendamento -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>Agendar pelo WhatsApp</span>
+            </button>
+
+            <a href="#servicos" class="btn btn-secondary">
+              <span>Ver serviços</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-info-badges">
+            <div class="hero-info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Sem filas de espera</span>
+            </div>
+            <div class="hero-info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+              <span>Café especial incluso</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-illustration">
+          <div class="hero-illustration__card">
+            <!-- Ilustração SVG Barber Pole com Detalhes Vintage em Cobre & Marrom -->
+            <svg class="hero-illustration__svg" viewBox="0 0 240 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustração de poste de barbearia clássico e navalha">
+              <defs>
+                <!-- Gradiente de cobre metálico -->
+                <linearGradient id="copperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#E9D8B4" />
+                  <stop offset="50%" stop-color="#C8873A" />
+                  <stop offset="100%" stop-color="#93571A" />
+                </linearGradient>
+                <linearGradient id="innerPole" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#2a241f" />
+                  <stop offset="50%" stop-color="#3d342c" />
+                  <stop offset="100%" stop-color="#2a241f" />
+                </linearGradient>
+                <clipPath id="poleClip">
+                  <rect x="95" y="65" width="50" height="130" rx="4" />
+                </clipPath>
+              </defs>
+
+              <!-- Suporte de parede em ferro fundido trabalhado -->
+              <path d="M50 80 H85 M50 180 H85 M60 80 Q60 130 85 130 Q60 130 60 180" stroke="#C8873A" stroke-width="3" stroke-linecap="round" />
+              <rect x="42" y="70" width="10" height="120" rx="3" fill="#241e1b" stroke="#C8873A" stroke-width="1.5" />
+
+              <!-- Cúpula superior (globo de luz) -->
+              <circle cx="120" cy="38" r="16" fill="#E9D8B4" fill-opacity="0.85" stroke="url(#copperGrad)" stroke-width="2.5" />
+              <circle cx="117" cy="34" r="5" fill="#FFF8EE" fill-opacity="0.8" />
+
+              <!-- Tampa superior de latão/cobre -->
+              <path d="M90 65 Q120 50 150 65 L145 70 H95 Z" fill="url(#copperGrad)" stroke="#14110F" stroke-width="1" />
+
+              <!-- Corpo de vidro cilíndrico do Barber Pole -->
+              <rect x="92" y="65" width="56" height="130" rx="6" fill="#181412" stroke="url(#copperGrad)" stroke-width="2.5" />
+              
+              <!-- Listras espirais estilizadas (Cobre, Marfim, Tom Escuro) cortadas no cilindro -->
+              <g clip-path="url(#poleClip)">
+                <rect x="95" y="65" width="50" height="130" fill="url(#innerPole)" />
+                <!-- Listras inclinadas em tons clássicos de barbearia retrô -->
+                <path d="M80 50 L160 100 L160 115 L80 65 Z" fill="#C8873A" opacity="0.95" />
+                <path d="M80 75 L160 125 L160 140 L80 90 Z" fill="#E9D8B4" opacity="0.9" />
+                <path d="M80 100 L160 150 L160 165 L80 115 Z" fill="#A86824" opacity="0.95" />
+                <path d="M80 125 L160 175 L160 190 L80 140 Z" fill="#E9D8B4" opacity="0.9" />
+                <path d="M80 150 L160 200 L160 215 L80 165 Z" fill="#C8873A" opacity="0.95" />
+                <path d="M80 175 L160 225 L160 240 L80 190 Z" fill="#E9D8B4" opacity="0.9" />
+                <!-- Reflexo de vidro vertical -->
+                <rect x="100" y="65" width="6" height="130" fill="#FFFFFF" opacity="0.12" />
+              </g>
+
+              <!-- Base inferior do poste -->
+              <path d="M92 195 L148 195 L144 205 Q120 215 96 205 Z" fill="url(#copperGrad)" stroke="#14110F" stroke-width="1" />
+              <circle cx="120" cy="214" r="5" fill="url(#copperGrad)" />
+
+              <!-- Navalha clássica em primeiro plano à direita -->
+              <g transform="translate(140, 140) rotate(-25)">
+                <!-- Lâmina de aço -->
+                <path d="M0 0 L55 -8 Q65 -5 60 5 L5 12 Z" fill="#E9D8B4" stroke="#93571A" stroke-width="1.5" />
+                <!-- Cabo estilizado em tom cobre -->
+                <path d="M0 0 C-20 8 -40 20 -55 35 L-48 42 C-35 28 -15 15 5 12 Z" fill="#C8873A" stroke="#241e1b" stroke-width="1.5" />
+                <!-- Rebite da articulação -->
+                <circle cx="2" cy="6" r="2.5" fill="#14110F" />
+              </g>
+
+              <!-- Tesoura estilizada à esquerda -->
+              <g transform="translate(45, 175) rotate(35)">
+                <ellipse cx="10" cy="40" rx="7" ry="12" fill="none" stroke="#C8873A" stroke-width="2.5" />
+                <ellipse cx="30" cy="40" rx="7" ry="12" fill="none" stroke="#C8873A" stroke-width="2.5" />
+                <line x1="15" y1="30" x2="35" y2="-5" stroke="#E9D8B4" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="25" y1="30" x2="5" y2="-5" stroke="#E9D8B4" stroke-width="2.5" stroke-linecap="round" />
+                <circle cx="20" cy="18" r="2" fill="#C8873A" />
+              </g>
+            </svg>
+
+            <div class="hero-illustration__label">Corte Clássico &amp; Barba</div>
+            <div class="hero-illustration__sub">Arte e navalha afiada desde o primeiro detalhe</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. Três Diferenciais Curtos com Ícones
+         ====================================================================== -->
+    <section class="section features-section" aria-label="Diferenciais da Barbearia">
+      <div class="container">
+        <div class="features-grid">
+          <!-- Diferencial 1 -->
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <!-- Ícone Relógio / Pontualidade -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h2 class="feature-card__title">Hora marcada, sem espera</h2>
+            <p class="feature-card__desc">
+              Respeito absoluto ao seu tempo. Você agenda seu horário, chega e senta direto na cadeira sem filas ou imprevistos.
+            </p>
+          </article>
+
+          <!-- Diferencial 2 -->
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <!-- Ícone Navalha Clássica -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12 L14 4 C16 2 19 3 20 5 C21 7 20 10 18 11 L8 19 Z"></path>
+                <line x1="7" y1="18" x2="3" y2="22"></line>
+                <circle cx="8" cy="19" r="1.5" fill="currentColor"></circle>
+              </svg>
+            </div>
+            <h2 class="feature-card__title">Barbeiros experientes</h2>
+            <p class="feature-card__desc">
+              Domínio da tesoura, degradê milimétrico e barboterapia completa com produtos selecionados e toalha quente.
+            </p>
+          </article>
+
+          <!-- Diferencial 3 -->
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <!-- Ícone Café / Ambiente Acolhedor -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="2" x2="6" y2="5"></line>
+                <line x1="10" y1="2" x2="10" y2="5"></line>
+                <line x1="14" y1="2" x2="14" y2="5"></line>
+              </svg>
+            </div>
+            <h2 class="feature-card__title">Ambiente acolhedor</h2>
+            <p class="feature-card__desc">
+              Um refúgio para relaxar: climatização agradável, boa música ambiente, conversa amigável e um café fresco por nossa conta.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. Serviços e Preços (6 Cartões)
+         ====================================================================== -->
+    <section class="section section-alt" id="servicos">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Tabela de Cuidados</span>
+          <h2 class="section-title">Serviços &amp; Preços</h2>
+          <p class="section-subtitle">
+            Cortes executados com precisão e produtos de qualidade para manter seu estilo sempre em dia.
+          </p>
+        </header>
+
+        <div class="services-grid">
+          <!-- Cartão 1: Corte de Cabelo -->
+          <article class="service-card">
+            <div class="service-card__top">
+              <div class="service-card__header">
+                <h3 class="service-card__title">Corte de Cabelo</h3>
+                <span class="service-card__price">R$ 45</span>
+              </div>
+              <p class="service-card__desc">
+                Degradê, navalhado, corte social ou clássico na tesoura. Inclui lavagem refrescante e finalização com pomada modeladora.
+              </p>
+            </div>
+            <div class="service-card__bottom">
+              <span class="service-card__duration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Duração: 40 min
+              </span>
+              <button type="button" class="service-card__cta" data-action="agendar">
+                Agendar &rarr;
+              </button>
+            </div>
+          </article>
+
+          <!-- Cartão 2: Barba Tradicional -->
+          <article class="service-card">
+            <div class="service-card__top">
+              <div class="service-card__header">
+                <h3 class="service-card__title">Barba Tradicional</h3>
+                <span class="service-card__price">R$ 35</span>
+              </div>
+              <p class="service-card__desc">
+                Ritual de barbearia com toalha quente, óleo pré-barba, lâmina descartável e massagem pós-barba com loção calmante.
+              </p>
+            </div>
+            <div class="service-card__bottom">
+              <span class="service-card__duration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Duração: 35 min
+              </span>
+              <button type="button" class="service-card__cta" data-action="agendar">
+                Agendar &rarr;
+              </button>
+            </div>
+          </article>
+
+          <!-- Cartão 3: Corte + Barba (Destaque) -->
+          <article class="service-card service-card--featured">
+            <span class="service-card__badge">Mais Escolhido</span>
+            <div class="service-card__top">
+              <div class="service-card__header">
+                <h3 class="service-card__title">Corte + Barba</h3>
+                <span class="service-card__price">R$ 70</span>
+              </div>
+              <p class="service-card__desc">
+                O combo completo para alinhar todo o visual de uma vez só: corte capilar com acabamento fino e barboterapia tradicional.
+              </p>
+            </div>
+            <div class="service-card__bottom">
+              <span class="service-card__duration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Duração: 70 min
+              </span>
+              <button type="button" class="service-card__cta" data-action="agendar">
+                Agendar &rarr;
+              </button>
+            </div>
+          </article>
+
+          <!-- Cartão 4: Sobrancelha -->
+          <article class="service-card">
+            <div class="service-card__top">
+              <div class="service-card__header">
+                <h3 class="service-card__title">Sobrancelha</h3>
+                <span class="service-card__price">R$ 20</span>
+              </div>
+              <p class="service-card__desc">
+                Alinhamento e limpeza sutil dos fios excessivos na navalha ou pinça, respeitando a linha e expressão natural do seu rosto.
+              </p>
+            </div>
+            <div class="service-card__bottom">
+              <span class="service-card__duration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Duração: 15 min
+              </span>
+              <button type="button" class="service-card__cta" data-action="agendar">
+                Agendar &rarr;
+              </button>
+            </div>
+          </article>
+
+          <!-- Cartão 5: Acabamento / Pezinho -->
+          <article class="service-card">
+            <div class="service-card__top">
+              <div class="service-card__header">
+                <h3 class="service-card__title">Acabamento / Pezinho</h3>
+                <span class="service-card__price">R$ 25</span>
+              </div>
+              <p class="service-card__desc">
+                Manutenção rápida e precisa das linhas do contorno do pescoço, nuca e costeletas para manter o visual alinhado entre cortes.
+              </p>
+            </div>
+            <div class="service-card__bottom">
+              <span class="service-card__duration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Duração: 20 min
+              </span>
+              <button type="button" class="service-card__cta" data-action="agendar">
+                Agendar &rarr;
+              </button>
+            </div>
+          </article>
+
+          <!-- Cartão 6: Hidratação Capilar -->
+          <article class="service-card">
+            <div class="service-card__top">
+              <div class="service-card__header">
+                <h3 class="service-card__title">Hidratação Capilar</h3>
+                <span class="service-card__price">R$ 30</span>
+              </div>
+              <p class="service-card__desc">
+                Tratamento profundo para devolver maciez, brilho e saúde aos fios e ao couro cabeludo, usando produtos específicos masculinos.
+              </p>
+            </div>
+            <div class="service-card__bottom">
+              <span class="service-card__duration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Duração: 25 min
+              </span>
+              <button type="button" class="service-card__cta" data-action="agendar">
+                Agendar &rarr;
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="services-disclaimer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span>* Valores de exemplo para fins de demonstração.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. Sobre a Barbearia
+         ====================================================================== -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-illustration">
+            <!-- Ilustração SVG Cadeira de Barbeiro Retrô -->
+            <svg class="about-illustration__svg" viewBox="0 0 260 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustração de cadeira clássica de barbeiro vintage">
+              <!-- Encosto de cabeça estofado -->
+              <rect x="105" y="30" width="50" height="25" rx="6" fill="#2B2521" stroke="#C8873A" stroke-width="2" />
+              <line x1="130" y1="55" x2="130" y2="70" stroke="#C8873A" stroke-width="3" stroke-linecap="round" />
+
+              <!-- Encosto principal estofado -->
+              <rect x="85" y="70" width="90" height="80" rx="10" fill="#241E1A" stroke="#C8873A" stroke-width="2" />
+              <!-- Costuras/textura do estofado -->
+              <line x1="95" y1="95" x2="165" y2="95" stroke="#3D342C" stroke-width="1.5" />
+              <line x1="95" y1="120" x2="165" y2="120" stroke="#3D342C" stroke-width="1.5" />
+              <circle cx="110" cy="95" r="2" fill="#C8873A" />
+              <circle cx="150" cy="95" r="2" fill="#C8873A" />
+              <circle cx="110" cy="120" r="2" fill="#C8873A" />
+              <circle cx="150" cy="120" r="2" fill="#C8873A" />
+
+              <!-- Braços cromados/cobre com descanso acolchoado -->
+              <!-- Braço esquerdo -->
+              <path d="M72 105 Q60 105 60 125 L60 148 Q60 155 75 155" fill="none" stroke="#C8873A" stroke-width="3.5" stroke-linecap="round" />
+              <rect x="55" y="102" width="24" height="8" rx="3" fill="#E9D8B4" />
+
+              <!-- Braço direito -->
+              <path d="M188 105 Q200 105 200 125 L200 148 Q200 155 185 155" fill="none" stroke="#C8873A" stroke-width="3.5" stroke-linecap="round" />
+              <rect x="181" y="102" width="24" height="8" rx="3" fill="#E9D8B4" />
+
+              <!-- Assento estofado -->
+              <rect x="75" y="152" width="110" height="32" rx="8" fill="#2B2521" stroke="#C8873A" stroke-width="2" />
+              <!-- Costura do assento -->
+              <line x1="85" y1="168" x2="175" y2="168" stroke="#3D342C" stroke-width="1.5" />
+
+              <!-- Alavanca reclinável lateral em cobre -->
+              <path d="M192 165 L215 145" stroke="#C8873A" stroke-width="3" stroke-linecap="round" />
+              <circle cx="217" cy="143" r="4.5" fill="#E9D8B4" />
+
+              <!-- Descanso de pernas e pés -->
+              <path d="M100 184 L90 220 L170 220 L160 184" fill="#1E1A17" stroke="#C8873A" stroke-width="1.5" />
+              <rect x="80" y="220" width="100" height="10" rx="3" fill="#2B2521" stroke="#C8873A" stroke-width="2" />
+
+              <!-- Coluna hidráulica central telescópica -->
+              <rect x="118" y="184" width="24" height="48" rx="2" fill="#E9D8B4" stroke="#93571A" stroke-width="1.5" />
+              <rect x="114" y="210" width="32" height="24" rx="2" fill="#C8873A" />
+
+              <!-- Pedal hidráulico para ajuste de altura -->
+              <path d="M145 228 L170 236 L175 232" fill="none" stroke="#E9D8B4" stroke-width="2.5" stroke-linecap="round" />
+
+              <!-- Base redonda pesada de apoio no piso -->
+              <ellipse cx="130" cy="258" rx="65" ry="14" fill="#241E1A" stroke="#C8873A" stroke-width="3" />
+              <ellipse cx="130" cy="254" rx="48" ry="9" fill="none" stroke="#E9D8B4" stroke-width="1.5" />
+            </svg>
+          </div>
+
+          <div class="about-content">
+            <span class="section-tag">Espaço &amp; Filosofia</span>
+            <h2 class="section-title">Mais que um corte, um momento de pausa.</h2>
+            <p class="about-paragraph">
+              A Barbearia Exemplo nasceu para resgatar o valor do bom atendimento e a tradição dos barbeiros clássicos. Aqui, você não entra em uma linha de produção: cada atendimento é conduzido com calma, atenção aos detalhes e respeito ao seu gosto pessoal.
+            </p>
+            <p class="about-paragraph">
+              Do café passado na hora à toalha aquecida com essência relaxante, tudo é pensado para que você saia com a autoestima renovada, sentindo-se confortável e pronto para qualquer desafio.
+            </p>
+
+            <div class="about-highlights">
+              <div class="about-highlight-item">
+                <div class="about-highlight-item__num">+10 Anos</div>
+                <div class="about-highlight-item__label">De experiência com a navalha</div>
+              </div>
+              <div class="about-highlight-item">
+                <div class="about-highlight-item__num">100%</div>
+                <div class="about-highlight-item__label">Atendimento com hora marcada</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. Equipe (3 Cartões com Avatar de Iniciais)
+         ====================================================================== -->
+    <section class="section section-alt" id="equipe">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Quem Cuida de Você</span>
+          <h2 class="section-title">Nossa Equipe</h2>
+          <p class="section-subtitle">
+            Profissionais dedicados, apaixonados pela profissão e sempre prontos para entregar o melhor resultado.
+          </p>
+        </header>
+
+        <div class="team-grid">
+          <!-- Membro 1 -->
+          <article class="team-card">
+            <div class="team-avatar" aria-label="Iniciais de Ricardo Silva">RS</div>
+            <div>
+              <h3 class="team-name">Ricardo Silva</h3>
+              <p class="team-role">Especialista em Degradê &amp; Tesoura</p>
+            </div>
+            <p class="team-bio">
+              Mais de 8 anos dominando técnicas de degradê moderno, transições limpas e cortes sociais clássicos com tesoura.
+            </p>
+          </article>
+
+          <!-- Membro 2 -->
+          <article class="team-card">
+            <div class="team-avatar" aria-label="Iniciais de André Santos">AS</div>
+            <div>
+              <h3 class="team-name">André Santos</h3>
+              <p class="team-role">Mestre Barbeiro &amp; Barboterapia</p>
+            </div>
+            <p class="team-bio">
+              Especialista em alinhamento de barba na navalha, hidratação profunda e técnicas tradicionais de toalha quente.
+            </p>
+          </article>
+
+          <!-- Membro 3 -->
+          <article class="team-card">
+            <div class="team-avatar" aria-label="Iniciais de Felipe Rocha">FR</div>
+            <div>
+              <h3 class="team-name">Felipe Rocha</h3>
+              <p class="team-role">Visagismo &amp; Acabamento Fino</p>
+            </div>
+            <p class="team-bio">
+              Focado em analisar o formato do rosto para sugerir o corte e a barba que melhor valorizam os traços de cada cliente.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. Horários e Localização (Tabela e Endereço sem Mapa)
+         ====================================================================== -->
+    <section class="section" id="horarios">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Onde &amp; Quando</span>
+          <h2 class="section-title">Horários &amp; Localização</h2>
+          <p class="section-subtitle">
+            Planeje sua visita com facilidade e venha conhecer nosso espaço.
+          </p>
+        </header>
+
+        <div class="info-grid">
+          <!-- Tabela de Horários -->
+          <div class="info-card">
+            <h3 class="info-card__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Horário de Funcionamento</span>
+            </h3>
+
+            <table class="schedule-table" aria-label="Tabela de horários de funcionamento">
+              <tbody>
+                <tr>
+                  <td class="schedule-day">Terça a Sexta-feira</td>
+                  <td class="schedule-time">09:00 às 20:00</td>
+                </tr>
+                <tr>
+                  <td class="schedule-day">Sábado</td>
+                  <td class="schedule-time">08:30 às 19:00</td>
+                </tr>
+                <tr>
+                  <td class="schedule-day">Domingo</td>
+                  <td class="schedule-time schedule-closed">Fechado</td>
+                </tr>
+                <tr>
+                  <td class="schedule-day">Segunda-feira</td>
+                  <td class="schedule-time schedule-closed">Fechado</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="location-note">
+              Atendimento prioritário com hora marcada para garantir que você não perca tempo esperando.
+            </div>
+          </div>
+
+          <!-- Endereço e Contato -->
+          <div class="info-card">
+            <h3 class="info-card__title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Endereço &amp; Contato</span>
+            </h3>
+
+            <div class="location-details">
+              <div class="location-item">
+                <div class="location-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="location-item__label">Endereço</div>
+                  <div class="location-item__value">Rua Exemplo, 123 - Sua Cidade</div>
+                </div>
+              </div>
+
+              <div class="location-item">
+                <div class="location-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="location-item__label">Telefone / WhatsApp</div>
+                  <div class="location-item__value">(00) 00000-0000</div>
+                </div>
+              </div>
+
+              <div class="location-note">
+                Vagas de estacionamento rotativo em frente ao local e fácil acesso para você chegar com tranquilidade.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. Chamada Final para Agendar
+         ====================================================================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <span class="section-tag">Seu Horário Garantido</span>
+          <h2 class="cta-title">Pronto para renovar seu estilo?</h2>
+          <p class="cta-subtitle">
+            Escolha o melhor dia e horário para você. Cuidamos do resto enquanto você aproveita um bom café.
+          </p>
+          <button type="button" class="btn btn-primary" data-action="agendar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Agendar Horário</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       Rodapé Simples
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <line x1="15" y1="15" x2="28" y2="28"></line>
+          <circle cx="12" cy="28" r="4"></circle>
+          <line x1="15" y1="25" x2="28" y2="12"></line>
+          <circle cx="21" cy="20" r="1.5" fill="currentColor"></circle>
+        </svg>
+        <span>Barbearia Exemplo</span>
+      </div>
+
+      <p class="footer-credits">
+        <strong>Página demonstrativa</strong> &bull; Todos os nomes, dados e valores são fictícios.<br>
+        Desenvolvido pela <a href="https://wa.me/5561981714067?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20barbearia%20no%20site%20da%20Fidela%20Web%20e%20quero%20um%20site%20assim." class="footer-fidela-link" target="_blank" rel="noopener noreferrer">Fidela Web</a> para apresentar a proprietários de barbearia como pode ser a presença digital do seu negócio.
+      </p>
+
+      <nav class="footer-back-nav" aria-label="Links de navegação do modelo">
+        <a href="../index.html" class="footer-back-link">← Voltar aos modelos</a>
+        <span aria-hidden="true">·</span>
+        <a href="../../index.html" class="footer-back-link">Site da Fidela Web</a>
+      </nav>
+
+      <p>&copy; 2026 Barbearia Exemplo. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       10. Barra Fixa na Parte de Baixo (Só no Celular)
+       ====================================================================== -->
+  <nav class="mobile-bottom-bar" aria-label="Navegação móvel rápida">
+    <a href="#topo" class="mobile-bottom-bar__item">
+      <!-- Ícone Início -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+      <span>Início</span>
+    </a>
+
+    <a href="#servicos" class="mobile-bottom-bar__item">
+      <!-- Ícone Tesoura / Serviços -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="6" cy="6" r="3"></circle>
+        <circle cx="6" cy="18" r="3"></circle>
+        <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+        <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+        <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+      </svg>
+      <span>Serviços</span>
+    </a>
+
+    <button type="button" class="mobile-bottom-bar__item mobile-bottom-bar__item--highlight" data-action="agendar">
+      <!-- Ícone Calendário / Agendar -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span>Agendar</span>
+    </button>
+  </nav>
+
+  <!-- ======================================================================
+       Modal / Aviso Discreto de Demonstração
+       ====================================================================== -->
+  <div class="demo-modal-backdrop" id="demoModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle" aria-describedby="demoModalDesc" aria-hidden="true">
+    <div class="demo-modal">
+      <button type="button" class="demo-modal__close" id="demoModalClose" aria-label="Fechar aviso">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="demo-modal__icon" aria-hidden="true">
+        <!-- Ícone Balão de conversa / WhatsApp demonstrativo -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+      </div>
+
+      <span class="demo-modal__badge">Modelo Demonstrativo</span>
+      <h2 class="demo-modal__title" id="demoModalTitle">Botão de Agendamento</h2>
+      <p class="demo-modal__desc" id="demoModalDesc">
+        Em um site real, este botão abre o WhatsApp da barbearia.
+      </p>
+
+      <div class="demo-modal__actions">
+        <a href="https://wa.me/5561981714067?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20barbearia%20no%20site%20da%20Fidela%20Web%20e%20quero%20um%20site%20assim." 
+           class="btn btn-primary" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <span>Quero um site assim</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <button type="button" class="btn btn-secondary" id="demoModalDismiss">
+          <span>Continuar navegando no modelo</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="barbearia.js"></script>
+</body>
+</html>
