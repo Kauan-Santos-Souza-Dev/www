@@ -17,7 +17,7 @@ document.documentElement.classList.add('js');
     whatsappMensagem: "Olá! Vim pelo site da Fidela Web e gostaria de saber mais.",
     whatsappMensagemPlano: "Olá! Tenho interesse no plano da Fidela Web.",
     telefone: "(61) 98171-4067",
-    instagramUsuario: "fidelaweb",
+    instagramUsuario: "fidelaweb.digital",
     email: "fidelaweb@gmail.com",
     precoMensal: "R$ 79,90",
     mostrarPreco: true,
@@ -69,7 +69,7 @@ document.documentElement.classList.add('js');
     // Instagram
     var instaLink = document.getElementById('contactInstagramLink');
     if (instaLink) {
-      var usuarioInsta = config.instagramUsuario || 'fidelaweb';
+      var usuarioInsta = config.instagramUsuario || 'fidelaweb.digital';
       instaLink.setAttribute('href', 'https://instagram.com/' + usuarioInsta);
       instaLink.textContent = '@' + usuarioInsta;
     }
@@ -128,37 +128,51 @@ document.documentElement.classList.add('js');
 
     config.modelos.forEach(function (item, index) {
       var temUrl = item.url && item.url.trim() !== '';
-      var cardTag = temUrl ? 'a' : 'div';
-      var card = document.createElement(cardTag);
+      var card = document.createElement('article');
       card.className = 'modelo-card card reveal';
       card.style.setProperty('--delay', (0.15 * (index + 1)) + 's');
 
-      if (temUrl) {
-        card.setAttribute('href', item.url);
-        card.setAttribute('target', '_blank');
-        card.setAttribute('rel', 'noopener noreferrer');
-        card.setAttribute('aria-label', item.nome + ' - Ver modelo em nova aba');
-      }
-
-      // Estilo de prévia ilustrada em CSS
-      var previewDecorHtml = '';
-      if (item.nome.toLowerCase().indexOf('barbearia') !== -1) {
-        previewDecorHtml = '<div class="barber-pole-decor" aria-hidden="true"></div>';
+      // Escolhe o tipo de prévia em CSS
+      var previewHtml;
+      if (item.nome.toLowerCase().indexOf('barbearia') !== -1 && temUrl) {
+        previewHtml =
+          '<div class="previa-barbearia" aria-hidden="true">' +
+          '<div class="previa-barbearia__barra"><span></span><span></span><span></span></div>' +
+          '<div class="previa-barbearia__corpo">' +
+          '<div class="previa-barbearia__topo"><div class="previa-barbearia__logo"></div><div class="previa-barbearia__menu"></div></div>' +
+          '<div class="previa-barbearia__hero">' +
+          '<div class="previa-barbearia__titulo"></div>' +
+          '<div class="previa-barbearia__titulo previa-barbearia__titulo--curto"></div>' +
+          '<div class="previa-barbearia__texto"></div>' +
+          '<div class="previa-barbearia__botao"></div>' +
+          '</div>' +
+          '<div class="previa-barbearia__servicos"><span></span><span></span><span></span></div>' +
+          '</div>' +
+          '</div>';
+      } else if (temUrl) {
+        previewHtml =
+          '<div class="modelo-preview" aria-hidden="true">' +
+          '<div class="modelo-preview-screen">' +
+          '<div class="store-bag-decor"></div>' +
+          '<div class="modelo-preview-text"></div>' +
+          '</div>' +
+          '</div>';
       } else {
-        previewDecorHtml = '<div class="store-bag-decor" aria-hidden="true"></div>';
+        previewHtml =
+          '<div class="modelo-preview" aria-hidden="true">' +
+          '<div class="modelo-preview-screen">' +
+          '<div class="barber-pole-decor"></div>' +
+          '<div class="modelo-preview-text"></div>' +
+          '</div>' +
+          '</div>';
       }
 
       var badgeOrActionHtml = temUrl
-        ? '<span class="modelo-link-action">Acessar modelo &rarr;</span>'
+        ? '<a href="' + escapeHtml(item.url) + '" class="btn btn-primary btn-ver-modelo">Ver modelo</a>'
         : '<span class="badge-em-breve">Em breve</span>';
 
       card.innerHTML =
-        '<div class="modelo-preview" aria-hidden="true">' +
-        '<div class="modelo-preview-screen">' +
-        previewDecorHtml +
-        '<div class="modelo-preview-text"></div>' +
-        '</div>' +
-        '</div>' +
+        previewHtml +
         '<div class="modelo-card-content">' +
         '<div class="modelo-card-header">' +
         '<h3 class="modelo-card-title">' + escapeHtml(item.nome) + '</h3>' +
@@ -170,6 +184,12 @@ document.documentElement.classList.add('js');
 
       grid.appendChild(card);
     });
+
+    // Texto discreto após o grid
+    var maisModelos = document.createElement('p');
+    maisModelos.className = 'modelos-em-breve-nota';
+    maisModelos.textContent = 'Mais modelos em breve.';
+    grid.parentNode.insertBefore(maisModelos, grid.nextSibling);
   }
 
   // Prevenção simples contra XSS para textos dinâmicos
@@ -191,7 +211,7 @@ document.documentElement.classList.add('js');
     var liveFeedback = document.getElementById('emailCopyFeedback');
     var emailText = document.getElementById('contactEmailText');
 
-    if (!btnCopy || !emailText) return;
+    if (!btnCopy) return;
 
     btnCopy.addEventListener('click', function () {
       var emailEl = document.getElementById('contactEmailLink') || emailText;

@@ -29,18 +29,13 @@ window.SITE_CONFIG = {
   mostrarPreco: true,
 
   // Vitrine de sites-modelo demonstrativos.
-  // Se tiver um link, coloque a URL completa em 'url'.
+  // Se tiver um link, coloque a URL relativa (sem barra no começo) em 'url'.
   // Se 'url' for vazio (""), o card exibirá automaticamente o selo "Em breve" e não será clicável.
   modelos: [
     {
       nome: "Barbearia",
-      descricao: "Modelo para barbearias e salões",
-      url: ""
-    },
-    {
-      nome: "Comércio local",
-      descricao: "Modelo para pequenas lojas e comércios",
-      url: ""
+      descricao: "Modelo para barbearias: serviços, preços, equipe e agendamento pelo WhatsApp.",
+      url: "modelos/barbearia/index.html"
     }
   ]
 };
