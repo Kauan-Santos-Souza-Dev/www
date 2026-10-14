@@ -12,5 +12,5 @@ window.FIDELA_CONFIG = {
   email: "fidelaweb@gmail.com",
 
   // Caminho da logo oficial.
-  logo: "Assets/fidela-web-logo.svg"
+  logo: "assets/fidela-web-logo.svg"
 };
